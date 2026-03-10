@@ -1,9 +1,51 @@
+@font-face {
+    font-family: 'AR Julian';
+    src: url('./ARJULIAN.ttf');
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    font-family: 'AR Julian', serif;
     width: 100%;
     height: 100%;
     background: black;
+    margin: 0;
+    padding: 0;
+}
+
+#tip-container {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #tip-content {
     color: white;
+    font-size: 8cqh;
+    text-align: center
+}
+
+.static-text-container {
+
+    width: 100%;
+    height: 10%;
+    text-align: left;
+}
+
+.static-text-content {
+    padding: 20px;
+    color: white;
+    font-size: 5cqh;
+}
+
+.right {
+    text-align: right;
 }
