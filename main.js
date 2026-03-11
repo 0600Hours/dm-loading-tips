@@ -1,9 +1,19 @@
-const TIP_DISPLAY_DURATION = 20 * 1000;
+const TIP_DISPLAY_DURATION = 30 * 1000;
+
+const tipElement = document.getElementById('tip-content');
 
 const loadRandomTip = () => {
-    document.getElementById('tip-content').innerText =
-        tipsArray[Math.floor(Math.random() * tipsArray.length)];
+    tipElement.classList.remove('fade-in');
+    tipElement.classList.add('fade-out');
+    setTimeout(() => {
+        tipElement.textContent =
+            tipsArray[Math.floor(Math.random() * tipsArray.length)];
+        tipElement.classList.remove('fade-out');
+        tipElement.classList.add('fade-in');
+    }, 1000)
+    
 }
 
-loadRandomTip();
+tipElement.textContent =
+    tipsArray[Math.floor(Math.random() * tipsArray.length)];
 setInterval(loadRandomTip, TIP_DISPLAY_DURATION);
