@@ -1,4 +1,4 @@
-const TIP_DISPLAY_DURATION = 30 * 1000;
+const TIP_DISPLAY_DURATION = 20 * 1000;
 
 const tipElement = document.getElementById('tip-content');
 
